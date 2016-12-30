@@ -1,0 +1,6 @@
+<h1>Index</h1>
+<%= link_to "XML", posts_path(f: "xml") %>
+<%= link_to "TXT", posts_path %>
+<%= link_to "JSON", posts_path(f: "json") %>
+<br>
+<%= render format(@value), posts: @posts %>
