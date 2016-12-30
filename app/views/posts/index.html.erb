@@ -1,6 +1,9 @@
-<h1>Index</h1>
-<%= link_to "XML", posts_path(f: "xml") %>
-<%= link_to "TXT", posts_path %>
-<%= link_to "JSON", posts_path(f: "json") %>
-<br>
-<%= render format(@value), posts: @posts %>
+<h1>Posts</h1>
+<p>Click on the buttons below to show the different formats</p>
+<%= link_to "HTML", posts_path, class: "button" %>
+<%= link_to "XML", posts_path(f: "xml"), class: "button" %>
+<%= link_to "JSON", posts_path(f: "json"), class: "button" %>
+
+<div style="margin: 30px">
+  <%= render format(@value), posts: @posts %>
+</div>
