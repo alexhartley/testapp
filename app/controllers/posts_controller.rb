@@ -2,6 +2,11 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @value = params[:f]
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts.to_json }
+      format.xml { render partial: 'show_format' }
+    end
   end
 
   def new
